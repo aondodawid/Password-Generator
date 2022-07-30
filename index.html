@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p>Copy to clipboard</p>
+        <h1>Generate a <span> random password</span></h1>
+        <h2>Never use an insecure password again.</h2>
+      </header>
+      <div>
+        <button onclick="generatePassword()">
+          <img src="./Iconlight.png" alt="light-icon" /><span>
+            Generate passwords</span
+          >
+        </button>
+        <input
+          placeholder="Password length"
+          type="number"
+          name=""
+          id="passworLength"
+        />
+      </div>
+      <section>
+        <input type="text" class="input--password" name="" id="firstPassword" />
+        <input type="text" class="input--password" name="" id="secondPasword" />
+        <input type="text" class="input--password" name="" id="thirdPasword" />
+        <input type="text" class="input--password" name="" id="fourthPasword" />
+        <p id="message"></p>
+      </section>
+    </main>
+    <script src="my.js"></script>
+  </body>
+</html>
