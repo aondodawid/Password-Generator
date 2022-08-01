@@ -14,12 +14,11 @@
   <body>
     <main>
       <header>
-        <p>Copy to clipboard</p>
         <h1>Generate a <span> random password</span></h1>
         <h2>Never use an insecure password again.</h2>
       </header>
-      <div>
-        <button onclick="generatePassword()">
+      <div class="buttons">
+        <button>
           <img src="./Iconlight.png" alt="light-icon" /><span>
             Generate passwords</span
           >
@@ -27,8 +26,8 @@
         <input
           placeholder="Password length"
           type="number"
-          name=""
-          id="passworLength"
+          id="passwordLength"
+          class="input-second"
         />
       </div>
       <section>
@@ -36,8 +35,16 @@
         <input type="text" class="input--password" name="" id="secondPasword" />
         <input type="text" class="input--password" name="" id="thirdPasword" />
         <input type="text" class="input--password" name="" id="fourthPasword" />
-        <p id="message"></p>
       </section>
+      <p class="error-message">message</p>
+      <div>
+        <label>Special characters</label>
+        <input type="range" min="0" max="1" value="1" id="special-char" />
+      </div>
+      <div>
+        <label>Uperrcase</label>
+        <input type="range" min="0" max="1" value="1" id="uperrcase" />
+      </div>
     </main>
     <script src="my.js"></script>
   </body>
