@@ -113,6 +113,7 @@ input[type='number'] {
   outline-style: none;
   border: none;
   text-align: center;
+  font-size: 1.1rem;
 }
 
 .input--password {
