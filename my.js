@@ -45,12 +45,14 @@ function makePassword(length, word) {
 function generatePassword() {
   let word = "";
   message.classList.remove("visibility");
-  if (length.value > 0) {
+  if (length.value <= 0) {
+    return displayErrorMessage();
+  } else if (length.value > 20) {
+    return displayErrorLengthMessage();
+  } else {
     passwords.forEach((password) => {
       return (password.value = makePassword(length.value, word));
     });
-  } else {
-    return displayErrorMessage();
   }
 }
 
@@ -58,6 +60,13 @@ function displayErrorMessage() {
   message.classList.add("visibility");
   message.classList.remove("message");
   message.textContent = "Password must have at last one character";
+}
+
+function displayErrorLengthMessage() {
+  message.classList.add("visibility");
+  message.classList.remove("message");
+  message.textContent =
+    "Password will cause problems if more than 20 characters long";
 }
 
 function coppyMessage() {

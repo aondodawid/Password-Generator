@@ -11,21 +11,22 @@ body {
 }
 
 body {
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
 }
 
 :root {
-  --mainfont: 'Inter', sans-serif;
-  --headlinefont: 'Karla', sans-serif;
+  --mainfont: "Inter", sans-serif;
+  --headlinefont: "Karla", sans-serif;
 }
 
 main {
   margin: 6rem auto;
-  background-color: #1F2937;
-  color: #FFF;
+  background-color: #1f2937;
+  color: #fff;
   font-family: var(--mainfont);
   max-width: 600px;
   padding: 1.5rem;
+  border: 0px solid red;
 }
 
 div {
@@ -36,10 +37,9 @@ h1 {
   margin: 0 auto;
 }
 
-h1>span {
-  color: #55F991;
+h1 > span {
+  color: #55f991;
   display: block;
-
 }
 
 h2 {
@@ -51,7 +51,7 @@ h2 {
   display: flex;
   /* flex-direction: row; */
   -ms-flex-align: baseline;
-  border-bottom: 1px solid #2F3E53;
+  border-bottom: 1px solid #2f3e53;
 }
 
 button {
@@ -61,10 +61,11 @@ button {
   border-radius: 6px;
   outline-style: none;
   border: none;
-  color: #FFF;
-  background-color: #10B981;
+  color: #fff;
+  background-color: #10b981;
   font-size: 1rem;
   font-weight: 500;
+  border: 5 px solid blue;
 }
 
 label {
@@ -92,20 +93,20 @@ input:focus::placeholder {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-button>img {
+button > img {
   width: 1rem;
   height: auto;
 }
 
-button>span {
+button > span {
   padding: 8px 6px;
 }
 
-input[type='number'] {
+input[type="number"] {
   width: 100%;
   margin: 1rem auto 1rem 0.5rem;
   padding: 0.5rem 1rem;
@@ -117,13 +118,13 @@ input[type='number'] {
 }
 
 .input--password {
-  background-image: url('./Icon.svg');
+  background-image: url("./Icon.svg");
   background-repeat: no-repeat;
   width: auto;
   height: 2.2rem;
   background-color: #273549;
   background-position: center;
-  color: #55F991;
+  color: #55f991;
   outline-style: none;
   border: none;
   border-radius: 6px;
@@ -157,15 +158,9 @@ section {
 }
 
 .message {
-  color: #55F991;
+  color: #55f991;
   margin: 1.5rem auto 1rem;
   display: block;
-}
-
-@media screen and (max-width:400px) {
-  .input--password {
-    width: 120px;
-  }
 }
 
 /* input[type="range"]:focus,
@@ -180,7 +175,7 @@ input[type="range"] {
   height: 7px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
-  background-image: linear-gradient(#55F991, #55F991);
+  background-image: linear-gradient(#55f991, #55f991);
   background-size: 50% 100%;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -192,10 +187,10 @@ input[type="range"]::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background: #55F991;
+  background: #55f991;
   cursor: pointer;
   box-shadow: 0 0 2px 0 #555;
-  transition: background .3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -203,10 +198,10 @@ input[type="range"]::-moz-range-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background: #55F991;
+  background: #55f991;
   /* box-shadow: 0 0 2px 0 #555; */
   cursor: pointer;
-  transition: background .3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 input[type="range"]::-ms-thumb {
@@ -214,33 +209,33 @@ input[type="range"]::-ms-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background: #55F991;
+  background: #55f991;
   box-shadow: 0 0 2px 0 #555;
-  transition: background .3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   cursor: pointer;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-  background: #55F991;
+  background: #55f991;
 }
 
 input[type="range"]::-moz-range-thumb:hover {
-  background: #55F991;
+  background: #55f991;
 }
 
 input[type="range"]::-ms-thumb:hover {
-  background: #55F991;
+  background: #55f991;
 }
 
 /* Input Track */
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   box-shadow: none;
   border: none;
   background: transparent;
 }
 
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   -webkit-appearance: none;
   box-shadow: none;
   border: none;
@@ -252,4 +247,24 @@ input[type="range"]::-ms-track {
   box-shadow: none;
   border: none;
   background: transparent;
+}
+
+@media screen and (max-width: 475px) {
+  main {
+    margin: 4rem auto;
+    width: 82.5%;
+    border-radius: 5px;
+  }
+  section {
+    grid-template-columns: 1fr;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .input--password {
+    width: 100%;
+  }
+  input[type="number"] {
+    margin: 1rem 0rem;
+  }
 }
