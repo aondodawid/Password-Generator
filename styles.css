@@ -37,7 +37,7 @@ h1 {
   margin: 0 auto;
 }
 
-h1 > span {
+h1>span {
   color: #55f991;
   display: block;
 }
@@ -97,12 +97,12 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-button > img {
+button>img {
   width: 1rem;
   height: auto;
 }
 
-button > span {
+button>span {
   padding: 8px 6px;
 }
 
@@ -249,21 +249,25 @@ input[type="range"]::-ms-track {
   background: transparent;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 550px) {
   main {
     margin: 4rem auto;
     width: 82.5%;
     border-radius: 5px;
   }
+
   section {
     grid-template-columns: 1fr;
   }
+
   .buttons {
     flex-direction: column;
   }
+
   .input--password {
     width: 100%;
   }
+
   input[type="number"] {
     margin: 1rem 0rem;
   }
