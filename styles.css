@@ -49,7 +49,6 @@ h2 {
 
 .buttons {
   display: flex;
-  /* flex-direction: row; */
   -ms-flex-align: baseline;
   border-bottom: 1px solid #2f3e53;
 }
