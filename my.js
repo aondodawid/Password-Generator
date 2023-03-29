@@ -1,9 +1,13 @@
-const length = document.getElementById("passwordLength");
-const button = document.querySelector("button");
-const passwords = document.querySelectorAll(".input--password");
+function get(el) {
+  document.getElementById(el);
+}
 
-const specialchar = document.getElementById("special-char");
-const uppercase = document.getElementById("uperrcase");
+get("passwordLength");
+
+var button = document.querySelector("button");
+const passwords = document.querySelectorAll(".input--password");
+const specialChar = document.getElementById("special-char");
+const upperCase = document.getElementById("upperCase");
 
 const message = document.querySelector(".error-message");
 
@@ -17,19 +21,19 @@ function randomChar() {
 
 function makePassword(length, word) {
   let arrayOfChar = generateString(+length);
-  const arraOfNum = [];
+  const arrayOfNum = [];
 
   for (let i = 0; i < length; i++) {
-    arraOfNum.push(i);
+    arrayOfNum.push(i);
   }
 
-  let Num = randomItem(arraOfNum);
+  let Num = randomItem(arrayOfNum);
 
-  if (uppercase.value == 1 && specialchar.value == 1) {
+  if (upperCase.value == 1 && specialChar.value == 1) {
     for (let i = 0; i < length; i++) {
       word += randomChar(length);
     }
-  } else if (uppercase.value == 1 && specialchar.value == 0) {
+  } else if (upperCase.value == 1 && specialChar.value == 0) {
     let item = randomItem(arrayOfChar);
     let item2 = randomItem(arrayOfChar);
     for (let i = Num; i < length; i++) {
@@ -69,7 +73,7 @@ function displayErrorLengthMessage() {
     "Password will cause problems if more than 20 characters long";
 }
 
-function coppyMessage() {
+function copyMessage() {
   message.classList.add("visibility");
   message.classList.add("message");
   message.textContent = "Password copied";
@@ -86,7 +90,7 @@ function copyToClipboard() {
 
   /*display message*/
   if (this.value != "") {
-    coppyMessage();
+    copyMessage();
   }
 }
 
